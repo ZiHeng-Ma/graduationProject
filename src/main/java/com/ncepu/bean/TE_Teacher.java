@@ -1,11 +1,15 @@
 package com.ncepu.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 教师信息表
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class TE_Teacher {
 
     private int t_No;//职工编号

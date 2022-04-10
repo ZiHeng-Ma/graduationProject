@@ -7,8 +7,35 @@
 </head>
 <body>
 
-<table class="table-hover">
+<form method="post" action="course">
+    账号：<input type="text" class="text">
+    <button type="submit" class="button" value="test"></button>
+</form>
 
+<table class="table">
+    <caption>List of users</caption>
+    <thead>
+    <tr>
+        <th scope="col">课程编号</th>
+        <th scope="col">课程名</th>
+        <th scope="col">讲授学时</th>
+        <th scope="col">实践学时</th>
+        <th scope="col">课程性质</th>
+        <th scope="col">课程类别</th>
+        <th scope="col">总学分</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="course : ${course}">
+        <td th:text="${course.getC_No()}"></td>
+        <td th:text="${course.getC_Name()}"></td>
+        <td th:text="${course.getC_Ttim()}"></td>
+        <td th:text="${course.getC_Prtim()}"></td>
+        <td th:text="${course.getC_Natur()}"></td>
+        <td th:text="${course.getC_Class()}"></td>
+        <td th:text="${course.getC_Credit()}"></td>
+    </tr>
+    </tbody>
 </table>
 
 </body>

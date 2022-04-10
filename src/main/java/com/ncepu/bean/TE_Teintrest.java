@@ -1,11 +1,15 @@
 package com.ncepu.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 教师教学信息表
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class TE_Teintrest {
 
     private String t_Opi;//学生对教师教学的意见

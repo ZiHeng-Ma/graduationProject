@@ -1,6 +1,8 @@
 package com.ncepu.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
@@ -8,6 +10,8 @@ import java.util.Date;
  * 学生信息表
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ST_Student {
 
     private Date s_Year;//入学年份

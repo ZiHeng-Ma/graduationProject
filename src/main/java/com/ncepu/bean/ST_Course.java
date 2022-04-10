@@ -1,12 +1,18 @@
 package com.ncepu.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * 课程表
  */
 @Data
-public class ST_Course {
+@AllArgsConstructor
+@NoArgsConstructor
+public class ST_Course implements Serializable {
 
     private int c_No;//课程编号
     private String c_Name;//课程名

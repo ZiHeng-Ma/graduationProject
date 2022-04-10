@@ -1,11 +1,15 @@
 package com.ncepu.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 学生学习兴趣表
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ST_Intrest {
 
     private String s_Indg;//兴趣度

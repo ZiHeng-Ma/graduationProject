@@ -1,11 +1,15 @@
 package com.ncepu.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 学生成绩表
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ST_Score {
 
     private int t_No;//职工编号
