@@ -9,5 +9,8 @@ import java.util.List;
 public interface StudentMapper {
 
     @Select("select * from ST_Student)")
-    List<ST_Student> getStudent();
+    List<ST_Student> getAll();
+
+    @Select("select * from ST_Student where s_nm = #{no}")
+    ST_Student getStudentByNo(Integer no);
 }

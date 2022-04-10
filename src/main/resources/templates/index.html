@@ -7,36 +7,13 @@
 </head>
 <body>
 
-<form method="post" action="course">
-    账号：<input type="text" class="text">
-    <button type="submit" class="button" value="test"></button>
-</form>
-
-<table class="table">
-    <caption>List of users</caption>
-    <thead>
-    <tr>
-        <th scope="col">课程编号</th>
-        <th scope="col">课程名</th>
-        <th scope="col">讲授学时</th>
-        <th scope="col">实践学时</th>
-        <th scope="col">课程性质</th>
-        <th scope="col">课程类别</th>
-        <th scope="col">总学分</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="course : ${course}">
-        <td th:text="${course.getC_No()}"></td>
-        <td th:text="${course.getC_Name()}"></td>
-        <td th:text="${course.getC_Ttim()}"></td>
-        <td th:text="${course.getC_Prtim()}"></td>
-        <td th:text="${course.getC_Natur()}"></td>
-        <td th:text="${course.getC_Class()}"></td>
-        <td th:text="${course.getC_Credit()}"></td>
-    </tr>
-    </tbody>
-</table>
+<div class="jumbotron">
+    <h1 class="display-4 text-center">信管专业学生成绩序列关联规则挖掘系统</h1>
+    <p class="lead text-center">毕业设计 —— 马子恒 信管1802 经济与管理学院</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="loginTea" role="button" style="display:block;margin:0 auto;width: 105px;height: 45px">我是老师</a>
+    <a class="btn btn-primary btn-lg" href="loginStu" role="button" style="display:block;margin:0 auto;width: 105px;height: 45px">我是学生</a>
+</div>
 
 </body>
 </html>
