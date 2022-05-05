@@ -4,47 +4,85 @@ import com.ncepu.bean.ST_Student;
 import com.ncepu.bean.TE_Teacher;
 import com.ncepu.service.StudentService;
 import com.ncepu.service.TeacherService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
 
-    private StudentService sservice;
-    private TeacherService tservice;
+    @Autowired
+    private TeacherService teacherService;
 
-    @GetMapping("/loginStu")
-    public String loginStu(){
-        return "student/login";
-    }
+    @Autowired
+    private StudentService studentService;
 
-    @RequestMapping("/loginTea")
-    public String loginTea(){
-        return "teacher/login";
-    }
-
-    @PostMapping("/login/submit")
-    public String login(Model model, @RequestParam("no")Integer no){
+    @RequestMapping("/logindispatch")
+    public String login(String user, String password, Model model, HttpServletRequest request, HttpServletResponse response){
         //学生学号开头是1
-        if (no.toString().substring(0, 1).equals("1")){
-            ST_Student student = sservice.getStudentByNo(no);
-            if (null != student)
-                return "student/index";
-            else
-                model.addAttribute("no", "学号输入错误");
-                return "student/login";
-        //教师开头是2
+        if (user.substring(0, 1).equals("1")) {
+            return StudentLogin(user,password,model,request);
+        //教师职工号开头是2
+        }else if (user.substring(0,1).equals("2")){
+            return TeacherLogin(user,password,model,request);
+        //管理员固定账号
+        }else if (user.equals("admin")){
+            return AdminLogin(user,password,model,request);
+        //输入有误
         }else {
-            TE_Teacher teacher = tservice.getTeacherByNo(no);
-            if (null != teacher)
-                return "teacher/index";
-            else
-                model.addAttribute("no", "教职工号输入错误");
-            return "teacher/login";
+            model.addAttribute("message", "用户名或密码错误");
+            return "/index";
         }
+    }
+
+    public String StudentLogin(String user,String password,Model model,HttpServletRequest request){
+        ST_Student student = studentService.getStudentBySnm(Integer.parseInt(user));
+        System.out.println(student);
+        if (student != null){
+            HttpSession session =request.getSession();
+            session.setMaxInactiveInterval(3600);
+
+            session.setAttribute("student", student);
+            return "student/main.jsp";
+        }else {
+            model.addAttribute("message", "用户名或密码错误");
+            return "../../index.jsp";
+        }
+    }
+
+    public String TeacherLogin(String user,String password,Model model,HttpServletRequest request){
+        TE_Teacher teacher = teacherService.getTeacherByTno(Integer.parseInt(user));
+        System.out.println(teacher);
+        if (teacher != null){
+            HttpSession session =request.getSession();
+            session.setMaxInactiveInterval(3600);
+
+            session.setAttribute("teacher", teacher);
+            return "teacher/main.jsp";
+        }else {
+            model.addAttribute("message","用户名或密码错误");
+            return "../../index.jsp";
+        }
+    }
+
+    public String AdminLogin(String user,String password,Model model,HttpServletRequest request){
+        //没做管理员，感觉功能和教师端差不太多
+//        System.out.println(u);
+//        if (u != null && u.getPassword().equals(password)){
+//            HttpSession session =request.getSession();
+//            session.setMaxInactiveInterval(3600);
+//
+//            session.setAttribute("user", u);
+//            return "admin/main.jsp";
+//        }else {
+//            model.addAttribute("message","用户名或密码错误");
+//            return "../../index.jsp";
+//        }
+        return null;
     }
 }

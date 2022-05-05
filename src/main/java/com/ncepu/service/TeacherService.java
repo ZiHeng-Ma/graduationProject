@@ -1,23 +1,14 @@
 package com.ncepu.service;
 
+import com.ncepu.bean.ST_Course;
+import com.ncepu.bean.ST_Score;
 import com.ncepu.bean.TE_Teacher;
-import com.ncepu.mapper.TeacherMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class TeacherService {
+public interface TeacherService {
 
-    @Autowired
-    private TeacherMapper mapper;
+    public TE_Teacher getTeacherByTno(int t_no);
 
-    public List<TE_Teacher> getAll(){
-        return mapper.getAll();
-    }
-
-    public TE_Teacher getTeacherByNo(Integer no){
-        return mapper.getTeacherByNo(no);
-    }
+    public List<ST_Score> selectAllByTno(int T_No);
 }

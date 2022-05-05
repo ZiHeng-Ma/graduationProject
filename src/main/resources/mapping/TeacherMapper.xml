@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ncepu.dao.TeacherDao">
+    <select id="selectAllByTno" resultType="java.util.List" parameterType="int">
+        select * from st_score where T_No=#{T_No}
+    </select>
+
+    <select id="getTeacherByTno" resultType="TE_Teacher" parameterType="int">
+        select * from te_teacher where t_no=#{t_no}
+    </select>
+</mapper>
