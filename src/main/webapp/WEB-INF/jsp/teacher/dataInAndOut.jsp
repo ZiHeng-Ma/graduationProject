@@ -6,24 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>教师端-数据导入/导出</title>
+    <title>教师端-成绩管理</title>
 
-    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/bootstrap.min.css">
 
     <script src="static/js/demo-rtl.js"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="static/css/nanoscroller.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/nanoscroller.css">
 
-    <link rel="stylesheet" type="text/css" href="static/css/theme_styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/theme_styles.css">
 
-    <link rel="stylesheet" href="static/css/daterangepicker.css" type="text/css">
-    <link rel="stylesheet" href="static/css/jquery-jvectormap-1.2.2.css" type="text/css">
-    <link rel="stylesheet" href="static/css/weather-icons.css" type="text/css">
-    <link rel="stylesheet" href="static/css/morris.css" type="text/css">
+    <link rel="stylesheet" href="../../../static/css/daterangepicker.css" type="text/css">
+    <link rel="stylesheet" href="../../../static/css/jquery-jvectormap-1.2.2.css" type="text/css">
+    <link rel="stylesheet" href="../../../static/css/weather-icons.css" type="text/css">
+    <link rel="stylesheet" href="../../../static/css/morris.css" type="text/css">
 
-    <link href='static/css/css1.css' rel='stylesheet' type='text/css'>
+    <link href='../../../static/css/css1.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div id="theme-wrapper">

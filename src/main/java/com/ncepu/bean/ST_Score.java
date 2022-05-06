@@ -12,11 +12,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ST_Score {
 
-    private int t_No;//职工编号
-    private int c_No;//课程代号
-    private int s_Ncor;//平时成绩
-    private int s_Mid;//期中成绩
-    private int s_Fs;//期末成绩
-    private int s_To;//总成绩
+    private int T_No;//职工编号
+    private int S_Nm;//学号
+    private int C_NO;//课程代号
+    private int S_Ncor;//平时成绩
+    private int S_Mid;//期中成绩
+    private int S_Fs;//期末成绩
+    private int S_TO;//总成绩
 
 }

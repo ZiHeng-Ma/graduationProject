@@ -3,7 +3,17 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ncepu.dao.StudentDao">
-    <select id="getStudentBySnm" resultType="ST_Student" parameterType="int">
+    <select id="getStudentBySnm" resultMap="ST_StudentMap" parameterType="int">
         select * from st_student where S_Nm=#{s_no}
     </select>
+    <resultMap id="ST_StudentMap" type="ST_Student">
+        <result property="s_Year" column="s_Year"/>
+        <result property="s_Nm" column="s_Nm"/>
+        <result property="s_Clas" column="s_Clas"/>
+        <result property="s_Nam" column="s_Nam"/>
+        <result property="s_Sp" column="s_Sp"/>
+        <result property="s_Sex" column="s_Sex"/>
+        <result property="s_Ori" column="s_Ori"/>
+        <result property="s_Add" column="s_Add"/>
+    </resultMap>
 </mapper>

@@ -37,7 +37,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-bars"></span>
                 </button>
-                <div class="label label-success pull-right" style="display: inline-block;margin-top: 15px;font-size:medium;">欢迎使用成绩管理系统</div>
+                <div class="label label-success pull-right" style="display: inline-block;margin-top: 15px;font-size:medium;">欢迎 ${name} 使用成绩管理系统</div>
             </div>
         </div>
     </header>

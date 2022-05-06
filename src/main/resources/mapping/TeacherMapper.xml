@@ -3,11 +3,44 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ncepu.dao.TeacherDao">
-    <select id="selectAllByTno" resultType="java.util.List" parameterType="int">
+    <select id="selectScoreByTno" resultMap="ST_ScoreMap" parameterType="int">
         select * from st_score where T_No=#{T_No}
     </select>
+    <resultMap id="ST_ScoreMap" type="ST_Score">
+        <result property="T_No" column="t_No"/>
+        <result property="S_Nm" column="S_Nm"/>
+        <result property="C_NO" column="c_No"/>
+        <result property="S_Ncor" column="s_Ncor"/>
+        <result property="S_Mid" column="s_Mid"/>
+        <result property="S_Fs" column="s_Fs"/>
+        <result property="S_TO" column="s_To"/>
+    </resultMap>
 
-    <select id="getTeacherByTno" resultType="TE_Teacher" parameterType="int">
+    <select id="getTeacherByTno" resultMap="TE_TeacherMap" parameterType="int">
         select * from te_teacher where t_no=#{t_no}
     </select>
+    <resultMap id="TE_TeacherMap" type="TE_Teacher">
+        <result property="T_No" column="T_No"/>
+        <result property="T_Name" column="T_Name"/>
+        <result property="T_Sex" column="T_Sex"/>
+        <result property="T_Eback" column="T_Eback"/>
+        <result property="T_Deg" column="T_Deg"/>
+        <result property="T_Sch" column="T_Sch"/>
+        <result property="T_Sta" column="T_Sta"/>
+        <result property="T_Age" column="T_Age"/>
+        <result property="T_Nu" column="T_Nu"/>
+        <result property="T_Poa" column="T_Poa"/>
+    </resultMap>
+
+    <update id="updateOneData">
+        update st_score set s_nm=#{S_Nm},s_ncor=#{S_Ncor},s_mid=#{S_Mid},s_fs=#{S_Fs},s_to=#{S_TO} where t_no=#{t_no} and c_no=#{c_no}
+    </update>
+
+    <delete id="deleteOneData">
+        delete from st_score where t_no=#{t_no} and c_no=#{c_no}
+    </delete>
+    
+    <insert id="insertOneData">
+        insert into st_score value (#{T_No},#{S_Nm},#{C_No},#{S_Ncor},#{S_Mid},#{S_Fs},#{S_TO})
+    </insert>
 </mapper>
