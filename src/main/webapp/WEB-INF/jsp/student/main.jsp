@@ -53,14 +53,14 @@
                                     系统功能
                                 </li>
                                 <li class="active">
-                                    <a href="">
-                                        <i class="fa fa-dashboard"></i>
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-search" style="top: 10px;"></i>
                                         <span>成绩查询</span>
                                     </a>
                                 </li>
                                 <li class="active">
-                                    <a href="">
-                                        <i class="fa fa-dashboard"></i>
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-record" style="top: 10px;"></i>
                                         <span>成绩挖掘</span>
                                     </a>
                                 </li>

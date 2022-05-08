@@ -53,33 +53,33 @@
                                 <li class="nav-header nav-header-first hidden-sm hidden-xs">
                                     系统功能
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/dataInAndOut">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-stats" style="top: 10px;"></i>
                                         <span>数据导入/导出</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreManager">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-hdd" style="top: 10px;"></i>
                                         <span>成绩管理</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreSearch">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-search" style="top: 10px;"></i>
                                         <span>成绩查询</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreMiner">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-record" style="top: 10px;"></i>
                                         <span>成绩挖掘</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreStatistic">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-align-left" style="top: 10px;"></i>
                                         <span>成绩统计</span>
                                     </a>
                                 </li>
@@ -90,37 +90,39 @@
                 <div id="nav-col-submenu"></div>
             </div>
             <div id="content-wrapper">
-                <form role="form" action="${pageContext.request.contextPath}/function/insertOneData">
-                    <div class="form-group">
-                        <label for="Input5">学生学号</label>
-                        <input type="text" class="form-control" id="Input5" name="Input5" placeholder="请输入学号" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input6">课程代号</label>
-                        <input type="text" class="form-control" id="Input6" name="Input6" placeholder="请输入课程号" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input1">平时成绩</label>
-                        <input type="text" class="form-control" id="Input1" name="Input1" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input2">期中成绩</label>
-                        <input type="text" class="form-control" id="Input2" name="Input2" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input3">期末成绩</label>
-                        <input type="text" class="form-control" id="Input3" name="Input3" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input4">总成绩</label>
-                        <input type="text" class="form-control" id="Input4" name="Input4" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <button type="submit" class="btn btn-success col-xs-12" style="width: 50px;">确认</button>
+                <div class="main-box clearfix" style="padding: 30px">
+                    <form role="form" action="${pageContext.request.contextPath}/function/insertOneData">
+                        <div class="form-group">
+                            <label for="Input5">学生学号</label>
+                            <input type="text" class="form-control" id="Input5" name="Input5" placeholder="请输入学号" style="width: 25%;">
                         </div>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <label for="Input6">课程代号</label>
+                            <input type="text" class="form-control" id="Input6" name="Input6" placeholder="请输入课程号" style="width: 25%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="Input1">平时成绩</label>
+                            <input type="text" class="form-control" id="Input1" name="Input1" placeholder="请输入成绩" style="width: 25%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="Input2">期中成绩</label>
+                            <input type="text" class="form-control" id="Input2" name="Input2" placeholder="请输入成绩" style="width: 25%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="Input3">期末成绩</label>
+                            <input type="text" class="form-control" id="Input3" name="Input3" placeholder="请输入成绩" style="width: 25%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="Input4">总成绩</label>
+                            <input type="text" class="form-control" id="Input4" name="Input4" placeholder="请输入成绩" style="width: 25%;">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="submit" class="btn btn-success col-xs-12" style="width: 50px;">确认</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

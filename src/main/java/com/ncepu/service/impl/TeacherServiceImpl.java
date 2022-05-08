@@ -40,4 +40,9 @@ public class TeacherServiceImpl implements TeacherService {
     public void insertOneData(int T_No, int S_Nm, int C_NO, int S_Ncor, int S_Mid, int S_Fs, int S_TO) {
         dao.insertOneData(T_No,S_Nm,C_NO,S_Ncor,S_Mid,S_Fs,S_TO);
     }
+
+    @Override
+    public List<ST_Score> selectScoreByCno(int C_NO) {
+        return dao.selectScoreByCno(C_NO);
+    }
 }

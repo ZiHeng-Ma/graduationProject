@@ -52,33 +52,33 @@
                                 <li class="nav-header nav-header-first hidden-sm hidden-xs">
                                     系统功能
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/dataInAndOut">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-stats" style="top: 10px;"></i>
                                         <span>数据导入/导出</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreManager">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-hdd" style="top: 10px;"></i>
                                         <span>成绩管理</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreSearch">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-search" style="top: 10px;"></i>
                                         <span>成绩查询</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreMiner">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-record" style="top: 10px;"></i>
                                         <span>成绩挖掘</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreStatistic">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-align-left" style="top: 10px;"></i>
                                         <span>成绩统计</span>
                                     </a>
                                 </li>

@@ -31,4 +31,6 @@ public interface TeacherDao {
                        @Param("S_Mid") int S_Mid,
                        @Param("S_Fs") int S_Fs,
                        @Param("S_TO") int S_TO);
+
+    List<ST_Score> selectScoreByCno (@Param("C_NO") int C_NO);
 }

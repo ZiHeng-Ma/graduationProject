@@ -1,13 +1,13 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>教师端-成绩管理</title>
+    <title>教师端-成绩挖掘</title>
 
     <link rel="stylesheet" type="text/css" href="../../../static/css/bootstrap.min.css">
 
@@ -38,7 +38,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-bars"></span>
                 </button>
-                <div class="label label-success pull-right" style="display: inline-block;margin-top: 15px;font-size:medium;">欢迎使用成绩管理系统</div>
+                <div class="label label-success pull-right" style="display: inline-block;margin-top: 15px;font-size:medium;">欢迎 ${name} 使用成绩管理系统</div>
             </div>
         </div>
     </header>
@@ -90,34 +90,8 @@
                 <div id="nav-col-submenu"></div>
             </div>
             <div id="content-wrapper">
-                <div class="main-box clearfix" style="padding: 30px;">
-                <form role="form" action="${pageContext.request.contextPath}/function/submitOneData">
-                    <div class="form-group">
-                        <label for="Input5">学号</label>
-                        <input type="text" class="form-control" id="Input5" name="Input5" placeholder="请输入学号" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input1">平时成绩</label>
-                        <input type="text" class="form-control" id="Input1" name="Input1" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input2">期中成绩</label>
-                        <input type="text" class="form-control" id="Input2" name="Input2" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input3">期末成绩</label>
-                        <input type="text" class="form-control" id="Input3" name="Input3" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="Input4">总成绩</label>
-                        <input type="text" class="form-control" id="Input4" name="Input4" placeholder="请输入成绩" style="width: 25%;">
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <button type="submit" class="btn btn-success col-xs-12" style="width: 50px;">确认</button>
-                        </div>
-                    </div>
-                </form>
+                <div class="main-box clearfix">
+
                 </div>
             </div>
         </div>

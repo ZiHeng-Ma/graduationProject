@@ -53,33 +53,33 @@
                                 <li class="nav-header nav-header-first hidden-sm hidden-xs">
                                     系统功能
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/dataInAndOut">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-stats" style="top: 10px;"></i>
                                         <span>数据导入/导出</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreManager">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-hdd" style="top: 10px;"></i>
                                         <span>成绩管理</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreSearch">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-search" style="top: 10px;"></i>
                                         <span>成绩查询</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreMiner">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-record" style="top: 10px;"></i>
                                         <span>成绩挖掘</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/scoreStatistic">
-                                        <i class="fa fa-dashboard"></i>
+                                        <i class="glyphicon glyphicon-align-left" style="top: 10px;"></i>
                                         <span>成绩统计</span>
                                     </a>
                                 </li>
@@ -107,20 +107,22 @@
                                 <table id="table-example" class="table table-hover dataTable no-footer" role="grid">
                                     <thead>
                                     <tr role="row">
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 96px;">职工编号</th>
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 96px;">课程代号</th>
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 96px;">平时成绩</th>
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 96px;">期中成绩</th>
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 96px;">期末成绩</th>
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 96px;">总成绩</th>
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 47px;">修改</th>
-                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 47px;">删除</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 84px;">职工编号</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 84px;">学号</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 84px;">课程代号</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 84px;">平时成绩</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 84px;">期中成绩</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 84px;">期末成绩</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 84px;">总成绩</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 41px;">修改</th>
+                                        <th class="text-center" tabindex="0" aria-controls="table-example" rowspan="1" colspan="1" style="width: 41px;">删除</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <c:forEach items="${scoreList}" var="score">
                                         <tr role="row" class="odd text-center">
                                             <td>${score.t_No}</td>
+                                            <td>${score.s_Nm}</td>
                                             <td>${score.c_NO}</td>
                                             <td>${score.s_Ncor}</td>
                                             <td>${score.s_Mid}</td>

@@ -40,7 +40,11 @@
         delete from st_score where t_no=#{t_no} and c_no=#{c_no}
     </delete>
     
-    <insert id="insertOneData">
-        insert into st_score value (#{T_No},#{S_Nm},#{C_No},#{S_Ncor},#{S_Mid},#{S_Fs},#{S_TO})
+    <insert id="insertOneData" parameterType="int">
+        insert into st_score value (#{T_No},#{S_Nm},#{C_NO},#{S_Ncor},#{S_Mid},#{S_Fs},#{S_TO})
     </insert>
+
+    <select id="selectScoreByCno" parameterType="int" resultMap="ST_ScoreMap">
+        select * from st_score where c_no=#{C_NO}
+    </select>
 </mapper>
