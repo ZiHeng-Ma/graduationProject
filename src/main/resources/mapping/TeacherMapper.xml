@@ -47,4 +47,5 @@
     <select id="selectScoreByCno" parameterType="int" resultMap="ST_ScoreMap">
         select * from st_score where c_no=#{C_NO}
     </select>
+
 </mapper>

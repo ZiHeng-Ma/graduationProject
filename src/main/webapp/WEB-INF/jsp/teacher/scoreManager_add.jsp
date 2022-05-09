@@ -56,7 +56,7 @@
                                 <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/dataInAndOut">
                                         <i class="glyphicon glyphicon-stats" style="top: 10px;"></i>
-                                        <span>数据导入/导出</span>
+                                        <span>数据导入</span>
                                     </a>
                                 </li>
                                 <li class="active" style="height: 60px;">

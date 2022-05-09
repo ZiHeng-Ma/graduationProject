@@ -45,4 +45,5 @@ public class TeacherServiceImpl implements TeacherService {
     public List<ST_Score> selectScoreByCno(int C_NO) {
         return dao.selectScoreByCno(C_NO);
     }
+
 }

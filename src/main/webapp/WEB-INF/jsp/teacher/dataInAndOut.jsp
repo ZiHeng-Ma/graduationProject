@@ -55,7 +55,7 @@
                                 <li class="active" style="height: 60px;">
                                     <a href="${pageContext.request.contextPath}/function/dataInAndOut">
                                         <i class="glyphicon glyphicon-stats" style="top: 10px;"></i>
-                                        <span>数据导入/导出</span>
+                                        <span>数据导入</span>
                                     </a>
                                 </li>
                                 <li class="active" style="height: 60px;">
@@ -89,7 +89,24 @@
                 <div id="nav-col-submenu"></div>
             </div>
             <div id="content-wrapper">
-
+                <div class="main-box clearfix" style="padding: 30px;">
+                    <form action="${pageContext.request.contextPath}/function/fileUpload" method="POST" enctype="multipart/form-data">
+                        <p>成绩上传：<input type="file" name="file" class="hidden" id="testfile" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></p>
+                        <button class="btn btn-info" type="button" value="选择文件" onclick="document.getElementById('testfile').click()">选择文件</button>
+                        <br>
+                        <div align="center">
+                            <font size="4" color="red">${message}</font>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success" style="margin-top: 10px;">提交</button>
+                        <br>
+                    </form>
+                    <div style="margin-top: 30px;">(请按照以下示范文件格式填写成绩)</div>
+                    <br>
+                    <a href="${pageContext.request.contextPath}/function/exampleDownload">
+                        <button type="button" class="btn btn-info">下载</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
