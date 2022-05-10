@@ -48,6 +48,7 @@ public class LoginController {
             session.setMaxInactiveInterval(3600);
 
             session.setAttribute("student", student);
+            model.addAttribute("name",student.getS_Nam());
             return "student/main.jsp";
         }else {
             model.addAttribute("message", "学号错误");

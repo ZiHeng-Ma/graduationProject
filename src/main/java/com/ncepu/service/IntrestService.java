@@ -7,4 +7,6 @@ import java.util.List;
 public interface IntrestService {
 
     ST_Intrest getIntrestBySnm(int S_Nm);
+
+    List<ST_Intrest> getAllIntrest();
 }

@@ -138,7 +138,7 @@ public class TeacherFunctionController {
         TE_Teacher teacher = (TE_Teacher) request.getSession().getAttribute("teacher");
         model.addAttribute("name",teacher.getT_Name());
         int C_NO = Integer.parseInt(cno);
-        List<ST_Score> scores = teacherService.selectScoreByCno(C_NO);
+        List<ST_Score> scores = teacherService.selectScoreByCno(C_NO,teacher.getT_No());
         model.addAttribute("scoreList",scores);
         return "teacher/scoreSearch.jsp";
     }
@@ -150,15 +150,15 @@ public class TeacherFunctionController {
         model.addAttribute("name",teacher.getT_Name());
 
         List<ST_Score> scores = teacherService.selectScoreByTno(teacher.getT_No());
-        Map<ST_Score,ST_Intrest> result = new HashMap<>();
-        for (int i = 0; i < scores.size(); i++) {
-            ST_Intrest intrestBySnm = intrestService.getIntrestBySnm(scores.get(i).getS_Nm());
-            result.put(scores.get(i),intrestBySnm);
-        }
+        List<ST_Intrest> intrests = intrestService.getAllIntrest();
+
+        Map<ST_Intrest,List<Integer>> result = new HashMap<>();
+
+        AlgorithmMain am = new AlgorithmMain();
+        result = am.initMap(scores, intrests,result);
 
         int min_sup = Integer.parseInt(Input1);
-        int min_con = Integer.parseInt(Input2);
-        AlgorithmMain am = new AlgorithmMain();
+        double min_con = Double.parseDouble(Input2);
         am.algorithmMain(result,min_sup,min_con);
         return "teacher/scoreMiner_main.jsp";
     }

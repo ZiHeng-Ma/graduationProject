@@ -16,4 +16,21 @@
         <result property="s_Ori" column="s_Ori"/>
         <result property="s_Add" column="s_Add"/>
     </resultMap>
+
+    <select id="selectScoreBySnm" resultMap="ST_ScoreMap" parameterType="int">
+        select * from st_score where S_Nm=#{S_Nm}
+    </select>
+    <resultMap id="ST_ScoreMap" type="ST_Score">
+        <result property="T_No" column="t_No"/>
+        <result property="S_Nm" column="S_Nm"/>
+        <result property="C_NO" column="c_No"/>
+        <result property="S_Ncor" column="s_Ncor"/>
+        <result property="S_Mid" column="s_Mid"/>
+        <result property="S_Fs" column="s_Fs"/>
+        <result property="S_TO" column="s_To"/>
+    </resultMap>
+
+    <select id="selectScoreByCno" resultMap="ST_ScoreMap" parameterType="int">
+        select * from st_score where c_no=#{C_NO} and s_nm=#{S_Nm}
+    </select>
 </mapper>

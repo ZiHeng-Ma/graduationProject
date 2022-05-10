@@ -42,8 +42,8 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public List<ST_Score> selectScoreByCno(int C_NO) {
-        return dao.selectScoreByCno(C_NO);
+    public List<ST_Score> selectScoreByCno(int C_NO,int T_No) {
+        return dao.selectScoreByCno(C_NO,T_No);
     }
 
 }

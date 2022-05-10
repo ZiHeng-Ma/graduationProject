@@ -53,13 +53,13 @@
                                     系统功能
                                 </li>
                                 <li class="active">
-                                    <a href="#">
+                                    <a href="${pageContext.request.contextPath}/student/scoreSearch">
                                         <i class="glyphicon glyphicon-search" style="top: 10px;"></i>
                                         <span>成绩查询</span>
                                     </a>
                                 </li>
                                 <li class="active">
-                                    <a href="#">
+                                    <a href="${pageContext.request.contextPath}/student/scoreMiner">
                                         <i class="glyphicon glyphicon-record" style="top: 10px;"></i>
                                         <span>成绩挖掘</span>
                                     </a>

@@ -15,4 +15,8 @@
         <result column="s_Un" property="s_Un"/>
         <result column="s_Ef" property="s_Ef"/>
     </resultMap>
+
+    <select id="getAllIntrest" resultMap="ST_IntrestMap">
+        select * from st_intrest
+    </select>
 </mapper>

@@ -8,4 +8,6 @@ import java.util.List;
 public interface IntrestDao {
 
     ST_Intrest getIntrestBySnm(@Param("S_Nm") int S_Nm);
+
+    List<ST_Intrest> getAllIntrest();
 }
